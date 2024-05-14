@@ -1,0 +1,97 @@
+ tea:  
+ 
+ 
+  mov dl,bl
+ mov ah,2
+ int 21h
+ 
+ mov dx, 13
+ mov ah, 2
+ int 21h
+ mov dx, 10
+ mov ah, 2
+ int 21h
+ 
+ lea dx,m9
+ mov ah, 9
+ int 21h 
+ 
+ lea dx,m10
+ mov ah, 9
+ int 21h 
+ 
+ 
+ mov ah, 1
+ int 21h
+ sub al , 48
+ sub bl,48
+ mov bl,al
+ 
+ mov dx, 13
+ mov ah, 2
+ int 21h
+ mov dx, 10
+ mov ah, 2
+ int 21h
+ 
+ mov si , offset arr
+ mov al , [ si , 1]
+sub al , 48
+ mov cl , al
+ 
+ 
+ mov al , bl
+ mul cl
+ 
+ aaa
+ 
+ mov dl,al
+ add dl,48  
+ mov ah,2
+ int 21h
+ 
+
+
+  lea dx,m13
+  mov ah,9
+  int 21h
+ 
+  mov dx,13
+  mov ah,2
+  int 21h
+  mov dx,10
+  mov ah,2
+  int 21h
+  
+  lea dx,m8
+  mov ah,9
+  int 21h
+  
+  mov dx,13
+  mov ah,2
+  int 21h
+  mov dx,10
+  mov ah,2
+  int 21h
+  
+  lea dx,m14
+  mov ah,9
+  int 21h
+  
+  mov dx,13
+  mov ah,2
+  int 21h
+  mov dx,10
+  mov ah,2
+  int 21h
+                      
+  mov ah,1
+  int 21h
+  
+  mov bl,al
+  cmp bl,'1'
+  je start
+  
+  cmp bl,'2'
+  jmp exit
+ 
